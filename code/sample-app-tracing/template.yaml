@@ -8,6 +8,10 @@ Transform:
 Globals:
   Function:
     Runtime: nodejs12.x
+    AutoPublishAlias: live
+    DeploymentPreference:
+      Type: AllAtOnce
+    Tracing: Active
     Timeout: 100
     MemorySize: 128
     CodeUri: ./
@@ -19,6 +23,7 @@ Globals:
         ENABLE_DEBUG: false
         # Enable usage of KeepAlive to reduce overhead of short-lived actions, like DynamoDB queries
         AWS_NODEJS_CONNECTION_REUSE_ENABLED: 1
+
 
 Resources:
 # API Gateway
